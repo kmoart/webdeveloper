@@ -1,0 +1,122 @@
+.main,
+.sidebar
+    .titulo_seccion
+        h3
+            font-family: $font-family2
+            font-size: 1.5em //24px
+            line-height: 1.5em //24px
+            font-weight: normal
+            color: $gris_oscuro
+            padding-bottom: 0.62em //10px
+            border-bottom: 4px solid $verde
+            margin-bottom: 1.25em //20px
+
+.main
+    .titulo_seccion
+        > div // Ésta forma indica que todos los divs que estén dentro de de la clase titulo_seccion tengan las siguientes propiedades
+            padding: 0
+    .single-post
+        .categorias
+            margin-bottom: 1.875em //30px
+    .posts
+        .post
+            margin-bottom: 1.875em //30px
+            .contenedor
+                background: #fff
+                -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3)
+                box-shadow:  0px 0px 5px 0px rgba(0,0,0,0.3)
+                .thumb
+                    img
+                        width: 100%
+                        vertical-align: top
+                        height: auto
+                .info
+                    padding: 1.25em //20px
+                    .titulo
+                        line-height: 1.125em //18px
+                        margin-bottom: 1.25em //25px
+                        font-size: 1.125em //18px
+                        font-weight: bold
+                        margin-top: 0
+                        a
+                            color:  $gris_oscuro
+                    .fecha
+                        color: $gris_claro
+                        font-size: 0.875em //14px
+                        margin-bottom: 1.25em //25px
+                    .extracto
+                        color: $texto
+                        font-size: 1em //16px
+                        height: 8.125em //130px . Se agrega un alto fijo al extracto para que no se deformen los demás elementos o posts , en caso de agregar mas palabras. 
+                        max-height: 8.125em //130 px. Se agrega un alto máximo al extracto, para que no se deforme el post.
+                        line-height: 1.75em //28px
+                        margin-bottom: 1.25em //25px
+                        overflow: hidden // Se agrega para ocultar la información que no se pueda ver después del alto máximo o max-height.
+                        &:hover
+                            overflow: auto
+                    .categorias
+                        // Los estilos ul y li agregados aquí son para wordpress. Para los estilos de la etiqueta a son  para agregarlos sin o con wordpress.
+                        ul
+                            list-style: none
+                            li
+                                display: inline-block
+                        a
+                            color: $gris_claro
+                            font-size: 1em //16px
+                            font-weight: bold
+                            margin-right: 1.25em// Para que tenga cada elemento 25px de separación.
+                            &:hover
+                                color: $azul_primario
+                                text-decoration: none
+    .paginacion
+        //> div //Decimos que todos los divs que tengamos dentro de la clase paginación tengan los siguientes estilos
+         //   padding: 0 es opcional si queremos que la paginación quede corrida hacia la izquierda
+        ul
+            list-style: none // Para quitar las viñetas a cada elemento
+            overflow: hidden // Dado que se trabajará con float.
+            margin-bottom: 1.25em // 20px
+            font-size: 1em //16px
+            li
+                float: left
+                background: $gris_oscuro
+                color: #fff
+                margin-right: .62em //10px
+                font-size: 1.125em //18px
+                line-height: 1.125em //18px
+                &.disabled
+                    padding: 0.62em 0.937em// 10px arriba y abajo y 15 px a los lados.
+                    font-size: 1.125em // 18px
+                    line-height: 1.125em // 18px
+                a
+                    background: $azul_primario
+                    color: #fff
+                    line-height: 1.125em //18px
+                    display: inline-block // para poder habilitar los paddings
+                    padding: 0.62em 0.937em// 10px arriba y abajo y 15 px a los lados.
+                    &:hover
+                        background: $azul_secundario
+                        text-decoration: none
+        .wp-pagenavi
+            margin-bottom: 1.25em
+            .pages,
+            span
+                background: $gris_oscuro
+                color: #fff
+                margin-right: 0.62em //10px
+                font-size: 1.125em //18px
+                line-height: 1.125em //18px
+                padding: 0.62em 0.937em// 10px arriba y abajo y 15 px a los lados.
+            a
+                background: $azul_primario
+                color: #fff
+                font-size: 1.125em //18px
+                display: inline-block // para poder habilitar los paddings
+                padding: 0.62em 0.937em// 10px arriba y abajo y 15 px a los lados.
+                margin-right:  0.62em // 10px 
+                &:hover
+                    background: $azul_secundario
+                    text-decoration: none
+
+
+                    
+

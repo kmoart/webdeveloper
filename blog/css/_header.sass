@@ -1,0 +1,47 @@
+header
+    .logo
+        padding-top: 1.25em //20px
+        padding-bottom: 1.25em //20px
+        a
+            display: inline-block
+    
+    .redes-sociales
+        text-align: right
+        line-height: 5em //80px
+        a
+            border-radius: 50% // Para redondear éstos enlaces.
+            width: 2.5em //40px
+            height: 2.5em //40px
+            text-align: center
+            line-height: 2.5em // 40px debe concordar con el tamaño del alto o height.
+            display: inline-block // al ser un enlace a, debemos agregarle el display inline block.
+            background: navy
+            color: #fff
+            margin-left: 1.25em // 20px
+            &.youtube // con ésta sintaxis decimos que queremos acceder al enlace con la clase "youtube".
+                background: #c05554
+            &.twitter // con ésta sintaxis que queremos acceder al enlace con la clase "twitter".
+                background: #55acee
+            &.facebook // con ésto sintaxis que queremos acceder al enlace con la clase "facebook".
+                background: #3b5998
+    
+    .menu
+        background: $azul_primario
+        margin-bottom: 1.25em
+        ul
+            list-style: none
+            overflow: hidden
+            margin: 0
+            padding: 0         
+            li
+                float: left
+                display: inline-block
+                a
+                    color: #fff //para poder ver el enlace.
+                    display: inline-block
+                    padding: 1em 1.25em //20px
+                    font-size: .87em // 14px
+                    color: #fff
+                    &:hover
+                        text-decoration: none
+                        background: $azul_secundario
