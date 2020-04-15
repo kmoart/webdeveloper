@@ -1,0 +1,387 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+/*----- ----- HEADER ----- ----- */
+
+header {
+    width: 100%;
+    background: url('../img/bg.jpg') #281a0c;
+    background-size: cover;
+    background-attachment: fixed;
+    /*Colocamos ésta propiedad para que el fondo se quede pegado a la pantalla*/
+    background-position: center 0;
+}
+
+
+/*Ahora establecemos el tamaño del header desde su contenedor*/
+
+header .contenedor {
+    position: relative;
+    /*nos sirve la posoción relativa en el contenedor para mover sus elementos*/
+    height: 700px;
+}
+
+header .menu {
+    width: 100%;
+    text-align: right;
+    /*Para que los elementos del menú del header se pongan a la derecha*/
+}
+
+header .menu a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    display: inline-block;
+    margin: 40px 20px;
+    text-decoration: none;
+    position: relative;
+    /*Para trabajar los enlaces con jquery y poderlos animar*/
+}
+
+header .menu a:hover {
+    text-decoration: underline;
+}
+
+header .textos {
+    width: 100%;
+    color: #fff;
+    position: absolute;
+    /* Se agrega con el fin de trabajar con las animaciones de jquery(parallax)
+    para que no se mueva tan rápido al animación con respecto a los otros elementos*/
+    top: 50%;
+    /*Se posiciona el titulo en la mitad de arriba a abajo del tamaño del contenedor del header*/
+    margin-top: -10%;
+    /*Éste es un margen opcional que posiciona un poco más arriba de la mitad del tamaño del contenedor del header*/
+}
+
+header .textos .nombre {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+header .textos .nombre span {
+    font-weight: 300;
+}
+
+header .textos h3 {
+    font-weight: 300;
+    font-size: 25px;
+    font-style: italic;
+}
+
+
+/*----- ----- MAIN ----- -----*/
+
+.main {
+    background: url('../img/memphis-mini-dark.png');
+    background-repeat: repeat;
+    /*Lo agregamos para que se repita en todos los navegadores*/
+}
+
+.main .acerca-de .contenedor {
+    overflow: visible;
+    /*Se agrega para que el contenido sobrante sea visible */
+    position: relative;
+}
+
+.main .acerca-de .foto {
+    width: 80%;
+    /*Se deja el otro 20% restante para lo que es el cuadro texto de acerca de.*/
+    position: absolute;
+    /*Para colocar la posición de la foto donde queramos a partir de la
+    propiedad position relative agregada en los estilos del contenedor.*/
+    left: 0;
+    top: -50px;
+    /*para posicionar la imagen -50 px fuera del contenedor*/
+    z-index: 0;
+    /*Con el fin de que la imagen pase atrás del texto.*/
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, .15);
+}
+
+.main .acerca-de .foto img {
+    vertical-align: top;
+    width: 100%;
+    /*para que abarque el tamaño del contenedor de la clase foto*/
+}
+
+.main .acerca-de article {
+    background: #fff;
+    padding: 40px;
+    width: 50%;
+    position: relative;
+    /*Nos permite posicionar el recuadro de acerca de*/
+    top: 300px;
+    float: right;
+    z-index: 1;
+    /*Para colocar el cuadro de texto adelante de la imagen.*/
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, .15);
+}
+
+.main .acerca-de article h3 {
+    font-size: 50px;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.main .acerca-de article p {
+    line-height: 20px;
+    /*Para que hay un espaciado entre cada linea del párrafo.*/
+    margin-bottom: 15px;
+}
+
+.main .menu {
+    padding-top: 570px;
+    margin-bottom: 50px;
+}
+
+.main .menu .titulo {
+    font-size: 40px;
+    font-weight: 300;
+    text-align: center;
+    /*Para centrar el texto*/
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.main .menu .borde1,
+.main .menu .borde2 {
+    border: 1px solid #fff;
+    background: transparent;
+    /*Añandimos un fondo transparente.*/
+    padding: 10px;
+    overflow: hidden;
+    /*Para que el contenido sobrante lo oculte*/
+}
+
+.main .menu article {
+    color: #fff;
+    width: 50%;
+    float: left;
+    padding: 20px;
+}
+
+.main .menu .categoria {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.main .menu .platillo {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-bottom: dotted #fff;
+    /*se le agregan unos puntos al inferior de cada div del 
+    platillo*/
+    overflow: hidden;
+    /*Si no cabe contenido en la caja, entonces se oculta.*/
+}
+
+.main .menu .nombre {
+    font-size: 20px;
+    margin-bottom: 15px;
+    float: left;
+}
+
+.main .menu .precio {
+    font-size: 20px;
+    margin-bottom: 15px;
+    float: right;
+}
+
+.main .menu .descripcion {
+    font-size: 16px;
+    clear: both;
+    /*Con el clear both se soluciona el problema del float right y left*/
+}
+
+.main .galeria {
+    overflow: hidden;
+    /*Las fotografías se les agrega float left para ponerla una al lado de la otra
+    el overflow hidden soluciona posibles problemas para poder aplicar el float left.*/
+}
+
+.main .galeria .foto {
+    width: 25%;
+    float: left;
+}
+
+.main .galeria .foto img {
+    width: 100%;
+    vertical-align: top;
+    opacity: .7;
+}
+
+.main .galeria .foto img:hover {
+    opacity: 1;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.main .ubicacion {
+    background: #fff;
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.main .ubicacion .titulo {
+    text-align: center;
+    font-size: 40px;
+    /*Tamaño de la fuente*/
+    line-height: 40px;
+    /*Alto de la fuente*/
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.main .ubicacion .direccion {
+    float: left;
+    width: 50%;
+    text-align: left;
+}
+
+.main .ubicacion .horarios {
+    float: right;
+    width: 50%;
+    text-align: right;
+    overflow: hidden;
+}
+
+.main .ubicacion .direccion h4 {
+    margin-bottom: 20px;
+}
+
+.main .ubicacion .direccion .calle {
+    margin-bottom: 15px;
+}
+
+.main .ubicacion .horarios h4 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main .ubicacion .horarios .entre-semana,
+.main .ubicacion .horarios .fin-semana {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+.main .mapa {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.main .mapa iframe {
+    width: 100%;
+    max-height: 600px;
+}
+
+
+/*----- ----- FOOTER ----- ----- */
+
+footer {
+    background: #000;
+}
+
+footer .copyright {
+    text-align: center;
+    padding: 15px 0;
+    color: #fff;
+}
+
+
+/*----- ----- MEDIA QUERIES ----- -----*/
+
+@media screen and (max-width: 800px) {
+    header .contenedor {
+        position: static;
+        /*Se cambia de position relativa a absolute para que los objetos no
+        se muevan*/
+        height: auto;
+    }
+    header .textos {
+        position: static;
+        /*Se cambia de position relativa a absolute para que los objetos no
+        se muevan*/
+        margin: 100px 0;
+    }
+    header .textos .nombre {
+        font-size: 30px;
+    }
+    header .textos h3 {
+        font-size: 10px;
+    }
+    header .menu {
+        text-align: center;
+    }
+    header .menu a {
+        margin: 10px 20px;
+    }
+    .main .acerca-de .foto {
+        width: 100%;
+        position: relative;
+    }
+    .main .acerca-de article {
+        position: relative;
+        width: 100%;
+        top: -50px;
+        transform: translate(0px, 0);
+        /*Se manipulará éste tranform para jquery*/
+    }
+    .main .menu {
+        padding-top: 300px;
+    }
+    .main .menu article {
+        width: 100%;
+    }
+    .main .galeria .foto {
+        width: 50%;
+    }
+    .main .mapa {
+        width: 80%;
+        margin: auto;
+        /*para que se centre automáticamente el mapa.*/
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .main .acerca-de article h3 {
+        font-size: 34px;
+        margin-bottom: 10px;
+    }
+    .main .menu article .nombre,
+    .main .menu article .precio {
+        font-size: 16px;
+        line-height: 16px;
+    }
+    .main .ubicacion .direccion {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .main .ubicacion .horarios {
+        width: 100%;
+        text-align: center;
+    }
+}
