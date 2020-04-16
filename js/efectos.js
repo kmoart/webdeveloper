@@ -46,14 +46,14 @@ $(document).ready(function() {
         $('#btn-portafolio').on('click', function(e) {
             e.preventDefault();
             $('html, body').animate({
-                scrollTop: 1110
+                scrollTop: 1200
             }, 500);
         });
 
         // Enlace contact
         $('#btn-contacto').on('click', function(e) {
             $('html, body').animate({
-                scrollTop: 3010
+                scrollTop: 2400
             }, 500);
         });
 

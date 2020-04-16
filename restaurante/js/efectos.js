@@ -70,28 +70,28 @@ $(document).ready(function() {
         $('#btn-acerca-de').on('click', function(e) {
             e.preventDefault();
             $('html, body').animate({
-                scrollTop: 690 // se puede reemplazar el valor de 660 por el de la variaable acercaDe.
+                scrollTop: 600 // se puede reemplazar el valor de 660 por el de la variaable acercaDe.
             }, 500);
         });
 
         $('#btn-menu').on('click', function(e) {
             e.preventDefault();
             $('html, body').animate({
-                scrollTop: 1070
+                scrollTop: 950
             }, 500);
         });
 
         $('#btn-galeria').on('click', function(e) {
             e.preventDefault();
             $('html, body').animate({
-                scrollTop: 2660
+                scrollTop: 2800
             }, 500);
         });
 
         $('#btn-ubicacion').on('click', function(e) {
             e.preventDefault();
             $('html, body').animate({
-                scrollTop: 4980
+                scrollTop: 3920
             }, 500);
         });
     }
