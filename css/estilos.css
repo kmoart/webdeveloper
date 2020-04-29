@@ -268,8 +268,19 @@ footer .redes-sociales {
     padding: 60px 0;
 }
 
-footer .redes-sociales .contenedor {
+footer .redes-sociales .contenedor .titulo {
+    font-size: 34px;
+    line-height: 34px;
+    margin-bottom: 40px;
+    font-weight: 300;
+    color: #3895ea;
+    text-align: center;
+}
+
+footer .redes-sociales .contenedor .glyph {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -285,24 +296,28 @@ footer .redes-sociales a {
     margin: 0 20px;
 }
 
-footer .redes-sociales .twitter:hover {
-    background: #1da1f2;
+footer .redes-sociales .html5:hover {
+    background: #e34f26;
 }
 
-footer .redes-sociales .facebook:hover {
-    background: #3b5998;
+footer .redes-sociales .css3:hover {
+    background: #ff4f81;
 }
 
-footer .redes-sociales .youtube:hover {
-    background: #ff0000;
+footer .redes-sociales .javascript:hover {
+    background: #fff;
 }
 
-footer .redes-sociales .github:hover {
-    background: #6e5494;
+footer .redes-sociales .wordpress:hover {
+    background: #21759b;
 }
 
-footer .redes-sociales .instagram:hover {
-    background: #f77737;
+footer .redes-sociales .bootstrap:hover {
+    background: #fff;
+}
+
+footer .redes-sociales .adobe:hover {
+    background: #6a737b;
 }
 
 

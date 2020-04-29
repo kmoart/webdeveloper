@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #000500;
+}
+
+h1 {
+    color: #fff;
+}
+
+.titulo {
+    margin: 3% auto;
+    text-align: center;
+}
+
+.galeria {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+
+.galeria img {
+    vertical-align: top;
+    width: 300px;
+    height: 250px;
+    margin: 20px;
+    padding: 5px;
+    opacity: 0.5;
+    border: 1px solid #484848;
+}
+
+.galeria img:hover {
+    border: 1px solid #fff;
+    opacity: 1;
+}
+
+
+/*Estilos del modal*/
+
+.modal {
+    display: none;
+    /*Para descativar el modal y solo activarlo con la seudoclase target, escrita a continuación*/
+}
+
+.modal:target {
+    /*Seudoclase target que funciona cuando hacemos click sobre la imagen*/
+    display: block;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modal h3 {
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.imagen {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /*los items centrados del eje secundario alineados verticalmente*/
+}
+
+.imagen a {
+    color: #fff;
+    font-size: 40px;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.imagen a:nth-child(2) {
+    margin: 0;
+    height: 100%;
+    flex-shrink: 2;
+    /*Es la proporción de reducción. Se va a reducir manteniendo la proporción con los dos enlaces "a" 1 y 3*/
+}
+
+.imagen img {
+    width: 700px;
+    /*Para que se adapte a la pantalla*/
+    border: 7px solid #fff;
+    box-sizing: border-box;
+}
+
+.btn-close {
+    display: block;
+    background: #fff;
+    width: 25px;
+    height: 25px;
+    margin: -280px 0 0 1050px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.contenedor {
+    margin: 3% auto;
+}
+
+header .menu a {
+    color: #fff;
+    padding-left: 5%;
+    padding-top: 10%;
+}
