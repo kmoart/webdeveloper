@@ -43,13 +43,16 @@ h1 {
 /*Estilos del modal*/
 
 .modal {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
     /*Para descativar el modal y solo activarlo con la seudoclase target, escrita a continuación*/
 }
 
 .modal:target {
     /*Seudoclase target que funciona cuando hacemos click sobre la imagen*/
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.5s;
     position: fixed;
     background: rgba(0, 0, 0, 0.8);
     top: 0;
@@ -66,11 +69,12 @@ h1 {
 }
 
 .imagen {
-    width: 100%;
+    width: 90%;
     height: 50%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    margin: 20px auto;
     /*los items centrados del eje secundario alineados verticalmente*/
 }
 
@@ -93,6 +97,7 @@ h1 {
     /*Para que se adapte a la pantalla*/
     border: 7px solid #fff;
     box-sizing: border-box;
+    justify-content: center;
 }
 
 .btn-close {
@@ -123,13 +128,22 @@ header .menu a {
 /*----- ----- MEDIA QUERIES ----- ----- */
 
 @media screen and (max-width: 800px) {
+    .modal:target {
+        display: flex;
+    }
     .btn-close {
-        margin: -190px 0 0 750px;
+        margin: 250px 0 0 350px;
+    }
+    .imagen img {
+        margin-left: 5%;
     }
 }
 
 @media screen and (max-width: 500px) {
+    .imagen img {
+        width: 450px;
+    }
     .btn-close {
-        margin: -190px 0 0 450px;
+        margin: 50px 0 0 350px;
     }
 }
