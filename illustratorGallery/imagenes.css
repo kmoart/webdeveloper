@@ -79,6 +79,7 @@ h1 {
 }
 
 .imagen a {
+    display: inline-block;
     color: #fff;
     font-size: 40px;
     text-decoration: none;
@@ -132,18 +133,27 @@ header .menu a {
         display: flex;
     }
     .btn-close {
-        margin: 250px 0 0 350px;
+        margin: 0;
     }
     .imagen img {
-        margin-left: 5%;
+        width: 550px;
     }
 }
 
 @media screen and (max-width: 500px) {
+    .imagen {
+        height: 100%;
+    }
     .imagen img {
-        width: 450px;
+        width: 350px;
     }
     .btn-close {
-        margin: 50px 0 0 350px;
+        margin: 1% 0px 0px 0px;
+    }
+    .imagen a {
+        margin: 0px 0px;
+    }
+    .imagen a:nth-child(1) {
+        margin-left: 10px;
     }
 }
