@@ -118,3 +118,18 @@ header .menu a {
     padding-left: 5%;
     padding-top: 10%;
 }
+
+
+/*----- ----- MEDIA QUERIES ----- ----- */
+
+@media screen and (max-width: 800px) {
+    .btn-close {
+        margin: -190px 0 0 750px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .btn-close {
+        margin: -190px 0 0 450px;
+    }
+}
