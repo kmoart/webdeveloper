@@ -45,6 +45,7 @@ h1 {
 .modal {
     visibility: hidden;
     opacity: 0;
+    top: -100%;
     /*Para descativar el modal y solo activarlo con la seudoclase target, escrita a continuación*/
 }
 
