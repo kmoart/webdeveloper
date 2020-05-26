@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Let's back together to the streets!</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <!--La clase navbar-expand-lg indica que a partir de un tamaño largo el menú se vería normal 
+                sin el botón del menú desplegable a la derecha-->
+            <!--navbar-dark indica que se va a trabajar con colores oscuros.-->
+            <div class="container">
+                <!-- div que sirve para centrar el contenido del menú-->
+                <a href="#" class="navbar-brand">
+                    <!--Enlace de inicio de la página-->Navbar</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuNavegacion" aria-expanded="false" aria-label="Alternar Menú">
+                  <!--Botón que contendrá las opciones del menú cuando el tamaño sea menor al largo-->
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuNavegacion">
+                    <!--Se agregan las clases collapse y navbar-collapse a las opciones del menú-->
+                    <ul class="navbar-nav mr-auto">
+                        <!--mr-auto sirve para que la barra del menú se posicione a la derecha-->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Begin</a>
+                        </li>
+                        <!--Sub menú desplegable-->
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown">People</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a href="#" class="dropdown-item">Childhood</a>
+                                <a href="#" class="dropdown-item">Young people</a>
+                                <a href="#" class="dropdown-item">Elderly</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link">Back To Portfolio</a>
+                        </li>
+                    </ul>
+
+                    <!--Formulario de búsqueda-->
+                    <form action="" class="form-inline my-2 my-lg-0">
+                        <input type="text" class="form-control mr-sm-2" type="search" placeholder="Search">
+                        <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="row">
+            <div class="col">
+                <div class="carousel slide" id="slideshow" data-ride="carousel">
+                    <!--Indicadores-->
+                    <ol class="carousel-indicators">
+                        <li data-target="#slideshow" data-slide-to="0" class="active"></li>
+                        <li data-target="#slideshow" data-slide-to="1"></li>
+                        <li data-target="#slideshow" data-slide-to="2"></li>
+                    </ol>
+                    <!--Slides-->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/slide1.jpg" class="d-block w-100" alt="">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="img/slide2.jpg" class="d-block w-100" alt="">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="img/slide3.jpg" class="d-block w-100" alt="">
+                        </div>
+                    </div>
+                    <!--Controles-->
+                    <a href="#slideshow" class="carousel-control-prev" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Preview</span>
+                        <!--se crea éste span para aquellos dispositivos
+                        que no puedan mostrar el span anterior con las clase carousel-control-prev-icon-->
+                    </a>
+                    <a href="#slideshow" class="carousel-control-next" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                        <!--se crea éste span para aquellos dispositivos
+                            que no puedan mostrar el span anterior con las clase carousel-control-next-icon-->
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="py-4 border-bottom">
+                    <h1 class="text-center">Gallery</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row py-4">
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="img/1.jpg" alt="">
+                    <div class="body">
+                        <h3 class="card-title">Childhood</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <a href="#" class="btn btn-sm btn-primary">Info</a>
+                        <a href="#" class="btn btn-sm btn-secondary">Follow Us</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="img/2.jpg" alt="">
+                    <div class="body">
+                        <h3 class="card-title">Hugs</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <a href="#" class="btn btn-sm btn-primary">Info</a>
+                        <a href="#" class="btn btn-sm btn-secondary">Follow Us</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="img/3.jpg" alt="">
+                    <div class="body">
+                        <h3 class="card-title">Youth</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <a href="#" class="btn btn-sm btn-primary">Info</a>
+                        <a href="#" class="btn btn-sm btn-secondary">Follow Us</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="img/4.jpg" alt="">
+                    <div class="body">
+                        <h3 class="card-title">Education</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <a href="#" class="btn btn-sm btn-primary">Info</a>
+                        <a href="#" class="btn btn-sm btn-secondary">Follow Us</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="img/5.jpg" alt="">
+                    <div class="body">
+                        <h3 class="card-title">Couples</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <a href="#" class="btn btn-sm btn-primary">Info</a>
+                        <a href="#" class="btn btn-sm btn-secondary">Follow Us</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="img/6.jpg" alt="">
+                    <div class="body">
+                        <h3 class="card-title">Art</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <a href="#" class="btn btn-sm btn-primary">Info</a>
+                        <a href="#" class="btn btn-sm btn-secondary">Follow Us</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="img/7.jpg" alt="">
+                    <div class="body">
+                        <h3 class="card-title">Family</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <a href="#" class="btn btn-sm btn-primary">Info</a>
+                        <a href="#" class="btn btn-sm btn-secondary">Follow Us</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="img/8.jpg" alt="">
+                    <div class="body">
+                        <h3 class="card-title">Meetings</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <a href="#" class="btn btn-sm btn-primary">Info</a>
+                        <a href="#" class="btn btn-sm btn-secondary">Follow Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="container">
+        <div class="row border-top py-5">
+            <div class="col">
+                <h3 class="lead">kmoart - 2020</h3>
+                <a href="#" class="btn btn-link">About Us</a>
+                <a href="#" class="btn btn-link">Contact</a>
+            </div>
+            <div class="col text-right">
+                <a href="#" class="btn btn-link">Page up</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
